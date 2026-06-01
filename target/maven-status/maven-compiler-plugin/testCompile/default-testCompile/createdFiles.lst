@@ -1,2 +1,8 @@
-DiegoLaguna\RegistrarPacienteTest.class
+AdrianOrdonez\RegistrarAdministradorTest.class
+AdrianGonzales\PruebaTest.class
 DiegoLaguna\ProbarLoginTest.class
+DiegoLaguna\LoginErroneoTest.class
+AdrianOrdonez\AceptarMedicoTest.class
+DiegoLaguna\RegistrarPacienteTest.class
+AdrianOrdonez\RegistrarGlucosaTest.class
+DiegoLaguna\AceptarPacienteTest.class
