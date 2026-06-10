@@ -31,7 +31,7 @@ public class LoginErroneoTest {
 
     @Test
     public void loginCredencialesIncorrectasTest() {
-
+        //1) Preparación de la prueba
         driver.get("http://localhost:4200");
         try {
             TimeUnit.SECONDS.sleep(5);
@@ -39,17 +39,18 @@ public class LoginErroneoTest {
             e.printStackTrace();
         }
 
-        // INPUT USUARIO
+        // 2) Lógica de la prueba
+        // Paso 1: llenar el campo de correo electrónico relacionado a una cuenta válida
         WebElement inputUsuario = driver.findElement(By.xpath("//input[@formcontrolname='usuario']"));
         inputUsuario.sendKeys("diegolagunalevy@gmail.com");
 
-        // INPUT PASSWORD
+        // Paso 2: llenar el campo de contraseña con un valor erroneo
         WebElement inputPassword = driver.findElement(
             By.xpath("//input[@formcontrolname='contrasena']")
         );
         inputPassword.sendKeys("123456");
 
-        // BOTÓN LOGIN
+        //  Paso 3: Hacer click en el boton de login
         WebElement btnLogin = driver.findElement(
             By.xpath("//button[contains(text(),'Ingresar')]")
         );
@@ -60,28 +61,18 @@ public class LoginErroneoTest {
             e.printStackTrace();
         }
 
-        // ESPERAR MODAL DE ERROR
-        WebElement modalError = driver.findElement(
-            
-                By.xpath("//html/body/app-root/app-login/div/div")
-            
-        );
-
-        // VALIDAR QUE SE MUESTRA
+        // 3) Verificación de la prueba
+        //Paso 4: Validar que el modal de error esta desplegado
+        WebElement modalError = driver.findElement(By.xpath("//html/body/app-root/app-login/div/div"));
         assertTrue(modalError.isDisplayed());
 
-        // VALIDAR TÍTULO
-        WebElement titulo = driver.findElement(
-            By.xpath("/html/body/app-root/app-login/div/div/div[1]/h2")
-        );
+        // Paso 5: Validar  el titulo y mensaje del modal de error
+        WebElement titulo = driver.findElement(By.xpath("/html/body/app-root/app-login/div/div/div[1]/h2"));
         assertEquals("Error de Inicio de Sesión", titulo.getText().trim());
 
-        // VALIDAR MENSAJE (opcional pero recomendado)
-        WebElement mensaje = driver.findElement(
-            By.xpath("/html/body/app-root/app-login/div/div/div[2]/p")
-        );
+        WebElement mensaje = driver.findElement(By.xpath("/html/body/app-root/app-login/div/div/div[2]/p"));
 
-        assertTrue(mensaje.getText().length() > 0); // hay mensaje
+        assertTrue(mensaje.getText().length() > 0);
 
     }
 
