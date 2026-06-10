@@ -15,6 +15,8 @@ import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+//Caso de prueba 49:
+//Verificar que en la sección de administradores activos, se pueden ver los detalles y ficha de cada administrador individualmente
 public class VerAdministradores {
 	
 	private WebDriver driver;

@@ -15,6 +15,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 
+//Caso de prueba 50:
+//Verificar que en la sección de administradores activos, se puede buscar a los administradores por su CI/código
 public class BuscarPorCI {
 	private WebDriver driver;
 	
