@@ -41,7 +41,7 @@ public class LoginErroneoTest {
 
         // INPUT USUARIO
         WebElement inputUsuario = driver.findElement(By.xpath("//input[@formcontrolname='usuario']"));
-        inputUsuario.sendKeys("usuario_invalido");
+        inputUsuario.sendKeys("diegolagunalevy@gmail.com");
 
         // INPUT PASSWORD
         WebElement inputPassword = driver.findElement(
@@ -63,7 +63,7 @@ public class LoginErroneoTest {
         // ESPERAR MODAL DE ERROR
         WebElement modalError = driver.findElement(
             
-                By.xpath("//div[contains(@class,'modal--error')]")
+                By.xpath("//html/body/app-root/app-login/div/div")
             
         );
 
@@ -72,13 +72,13 @@ public class LoginErroneoTest {
 
         // VALIDAR TÍTULO
         WebElement titulo = driver.findElement(
-            By.xpath("//div[contains(@class,'modal--error')]//h2")
+            By.xpath("/html/body/app-root/app-login/div/div/div[1]/h2")
         );
         assertEquals("Error de Inicio de Sesión", titulo.getText().trim());
 
         // VALIDAR MENSAJE (opcional pero recomendado)
         WebElement mensaje = driver.findElement(
-            By.xpath("//div[contains(@class,'modal--error')]//p")
+            By.xpath("/html/body/app-root/app-login/div/div/div[2]/p")
         );
 
         assertTrue(mensaje.getText().length() > 0); // hay mensaje

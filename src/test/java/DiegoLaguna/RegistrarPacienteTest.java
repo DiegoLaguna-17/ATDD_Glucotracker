@@ -109,12 +109,36 @@ public class RegistrarPacienteTest {
         contrasena.sendKeys("Caballe!123");
 
         try {
-            TimeUnit.SECONDS.sleep(15);
+            TimeUnit.SECONDS.sleep(10);
         } catch(InterruptedException e) {
             e.printStackTrace();
         }
           
+        WebElement btnRegistrar= driver.findElement(By.xpath("/html/body/app-root/app-solicitar-paciente/div/div/form/div[9]/button[1]"));
+        btnRegistrar.click();
 
+         try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch(InterruptedException e) {
+            e.printStackTrace();
+        }
+        // 3. Cambiar el control al Alert, verificar el texto exacto y aceptarlo
+        try {
+            org.openqa.selenium.Alert alert = driver.switchTo().alert();
+            
+            // Obtenemos el texto que muestra el alert
+            String textoAlert = alert.getText();
+            System.out.println("Mensaje del alert capturado: " + textoAlert);
+            
+            // Comparamos que el texto sea EXACTAMENTE el que capturaste
+            Assert.assertEquals("El mensaje del alert no es el esperado", "Paciente registrado exitosamente", textoAlert);
+            
+            // Aceptamos el alert para cerrarlo
+            alert.accept();
+            
+        } catch (org.openqa.selenium.NoAlertPresentException e) {
+            Assert.fail("El alert de éxito no se mostró en pantalla.");
+        }
         return;
     }
     

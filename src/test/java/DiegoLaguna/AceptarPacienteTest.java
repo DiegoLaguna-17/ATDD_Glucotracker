@@ -73,10 +73,50 @@ public class AceptarPacienteTest {
             e.printStackTrace();
         }
 
+        // ... tu código anterior ...
         WebElement btnAceptar=driver.findElement(By.xpath("/html/body/app-root/app-admin-shell/div/section/app-detalle-paciente-solicitud/div/header/div[2]/button[1]"));
-        assertEquals("Aceptar", btnAceptar.getText());
+        btnAceptar.click();
 
-    }
+        // 1. Esperar a que aparezca el Modal de Confirmación
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch(InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // 2. Hacer clic en el botón "Activar" dentro del Modal de Confirmación
+        // Buscamos el botón que tiene la clase 'btn-aceptar' y el texto 'Activar'
+        WebElement btnConfirmarActivacion = driver.findElement(By.xpath("//button[contains(@class, 'btn-aceptar') and text()='Activar']"));
+        btnConfirmarActivacion.click();
+
+        // 3. Esperar a que el backend procese y aparezca el Modal de Éxito
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch(InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // 4. Validar el Modal de Éxito
+        // Buscamos el título "¡Éxito!" dentro de la estructura del modal
+        WebElement tituloExito = driver.findElement(By.xpath("/html/body/app-root/app-admin-shell/div/section/app-detalle-paciente-solicitud/div[2]/div/div/h3"));
+        Assert.assertTrue("El modal de éxito no apareció", tituloExito.isDisplayed());
+
+        // Opcional: Validar que el mensaje diga "activado" (esto asegura que no fue el modal de rechazo)
+        WebElement mensajeActivado = driver.findElement(By.xpath("/html/body/app-root/app-admin-shell/div/section/app-detalle-paciente-solicitud/div[2]/div/div/p"));
+        Assert.assertTrue("El mensaje de paciente activado no apareció", mensajeActivado.isDisplayed());
+
+        // 5. Hacer clic en el botón "Continuar" para cerrar el modal de éxito
+        WebElement btnContinuar = driver.findElement(By.xpath("/html/body/app-root/app-admin-shell/div/section/app-detalle-paciente-solicitud/div[2]/div/div/div/button"));
+        btnContinuar.click();
+
+        // Breve pausa para ver cómo se cierra antes de terminar la prueba
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch(InterruptedException e) {
+            e.printStackTrace();
+        }
+    } // Fin del método aceptarPacienteTest
+    
     @AfterTest
     public void closeDriver() {
         if(driver != null) driver.quit();
