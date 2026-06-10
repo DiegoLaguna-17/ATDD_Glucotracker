@@ -2,24 +2,24 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-08T23:13:30Z" name="Surefire suite" finished-at="2026-06-08T23:13:53Z" duration-ms="22863">
+  <suite started-at="2026-06-10T18:42:17Z" name="Surefire suite" finished-at="2026-06-10T18:42:47Z" duration-ms="29470">
     <groups>
     </groups>
-    <test started-at="2026-06-08T23:13:30Z" name="Surefire test" finished-at="2026-06-08T23:13:53Z" duration-ms="22863">
-      <class name="AdrianaAlvarez.VerRegistroSinAlertaTest">
-        <test-method is-config="true" signature="setDriver()[pri:0, instance:AdrianaAlvarez.VerRegistroSinAlertaTest@df27fae]" started-at="2026-06-08T19:13:30Z" name="setDriver" finished-at="2026-06-08T19:13:32Z" duration-ms="1486" status="PASS">
+    <test started-at="2026-06-10T18:42:17Z" name="Surefire test" finished-at="2026-06-10T18:42:47Z" duration-ms="29470">
+      <class name="AdrianOrdonez.AceptarMedicoTest">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:AdrianOrdonez.AceptarMedicoTest@3d3fcdb0]" started-at="2026-06-10T14:42:17Z" name="setDriver" finished-at="2026-06-10T14:42:20Z" duration-ms="3317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDriver -->
-        <test-method signature="deberiaMostrarModalDetalleDeRegistroSinAlerta()[pri:0, instance:AdrianaAlvarez.VerRegistroSinAlertaTest@df27fae]" started-at="2026-06-08T19:13:32Z" name="deberiaMostrarModalDetalleDeRegistroSinAlerta" finished-at="2026-06-08T19:13:53Z" duration-ms="21056" status="PASS">
+        <test-method signature="aceptarSolicitudDeUnMedicoSolicitante()[pri:0, instance:AdrianOrdonez.AceptarMedicoTest@3d3fcdb0]" started-at="2026-06-10T14:42:20Z" name="aceptarSolicitudDeUnMedicoSolicitante" finished-at="2026-06-10T14:42:46Z" duration-ms="25395" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deberiaMostrarModalDetalleDeRegistroSinAlerta -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:AdrianaAlvarez.VerRegistroSinAlertaTest@df27fae]" started-at="2026-06-08T19:13:53Z" name="closeDriver" finished-at="2026-06-08T19:13:53Z" duration-ms="311" status="PASS">
+        </test-method> <!-- aceptarSolicitudDeUnMedicoSolicitante -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:AdrianOrdonez.AceptarMedicoTest@3d3fcdb0]" started-at="2026-06-10T14:42:46Z" name="closeDriver" finished-at="2026-06-10T14:42:47Z" duration-ms="751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- AdrianaAlvarez.VerRegistroSinAlertaTest -->
+      </class> <!-- AdrianOrdonez.AceptarMedicoTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
