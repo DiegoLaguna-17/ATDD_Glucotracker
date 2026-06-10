@@ -22,6 +22,18 @@ public class VerMedicoActivoTest {
         driver.manage().window().maximize();
     }
 
+    // --- TEST CASES RELACIONADOS ---
+
+    /* 
+        - Nº 40: Verificar que la pestaña “Médicos” está disponible al iniciar sesión con un perfil de administrador
+
+        - Nº 41: Verificar que es posible visualizar médicos activos en la opción “Activos” de la etiqueta “Médicos” en el panel principal de administrador
+        
+        - Nº 43: Verificar que es posible redirigir la pestaña a una pantalla de datos de médicos
+
+        - Nº 45: Verificar que es posible visualizar los datos generales de un médico activo
+    */
+   
     @Test
     public void verificarDatosVisiblesDeMedicoActivo() {
         // --- PREPARACIÓN DE LA PRUEBA ---

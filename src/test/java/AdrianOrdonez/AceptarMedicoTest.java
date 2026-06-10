@@ -21,6 +21,18 @@ public class AceptarMedicoTest {
         driver.manage().window().maximize();
     }
 
+    // --- TEST CASES RELACIONADOS ---
+    
+    /*
+        - Nº 40: Verificar que la pestaña “Médicos” está disponible al iniciar sesión con un perfil de administrador
+
+        - Nº 42: Verificar que es posible visualizar solicitudes de médicos en la opción “Solicitudes” de la etiqueta “Médicos” en el panel principal de administrador
+
+        - Nº 44: Verificar que es posible redirigir la pestaña a una pantalla de datos de una solicitud de médico
+
+        - Nº 46: Verificar que es posible visualizar los datos generales de una solicitud de médico
+    */
+
     @Test
     public void aceptarSolicitudDeUnMedicoSolicitante() {
         // --- PREPARACIÓN DE LA PRUEBA ---
