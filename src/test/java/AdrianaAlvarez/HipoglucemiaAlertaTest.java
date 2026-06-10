@@ -1,5 +1,6 @@
 package AdrianaAlvarez;
-
+// Del Caso de prueba 23
+// Verificar que enseña la alerta de episodio de hipoglucemia basado en los datos de glucosa registrados < 70 mg/dL si estos son registrados por el paciente de manera correcta
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;

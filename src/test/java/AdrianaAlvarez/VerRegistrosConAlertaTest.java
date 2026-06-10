@@ -1,5 +1,6 @@
 package AdrianaAlvarez;
-
+// Del Caso de Prueba 55
+// Verificar que un usuario paciente puede ver la información de sus propias tomas de glucosa, pudiendo ver el detalle de la toma que generó un episodio de hipoglucemia
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;

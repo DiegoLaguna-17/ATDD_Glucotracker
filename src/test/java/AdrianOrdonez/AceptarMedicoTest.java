@@ -1,7 +1,6 @@
 package AdrianOrdonez;
 
 import java.util.concurrent.TimeUnit;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AceptarMedicoTest {
@@ -23,11 +21,21 @@ public class AceptarMedicoTest {
         driver.manage().window().maximize();
     }
 
+    // --- TEST CASES RELACIONADOS ---
+    
+    /*
+        - Nº 40: Verificar que la pestaña “Médicos” está disponible al iniciar sesión con un perfil de administrador
+
+        - Nº 42: Verificar que es posible visualizar solicitudes de médicos en la opción “Solicitudes” de la etiqueta “Médicos” en el panel principal de administrador
+
+        - Nº 44: Verificar que es posible redirigir la pestaña a una pantalla de datos de una solicitud de médico
+
+        - Nº 46: Verificar que es posible visualizar los datos generales de una solicitud de médico
+    */
+
     @Test
-    public void aceptarMedicoTest() {
-
-        // PREPARACIÓN DE LA PRUEBA
-
+    public void aceptarSolicitudDeUnMedicoSolicitante() {
+        // --- PREPARACIÓN DE LA PRUEBA ---
         driver.get("http://localhost:4200");
 
         try {
@@ -36,13 +44,13 @@ public class AceptarMedicoTest {
             e.printStackTrace();
         }
 
-        // LÓGICA DE LA PRUEBA
+        // --- LÓGICA DE LA PRUEBA ---
         
-        // PASO 1: Ingresar email de Login
+        // PASO 1: Ingresar email de administrador
         WebElement emailLogin = driver.findElement(By.xpath("/html/body/app-root/app-login/section/div[2]/div/form/label[1]/input"));
         emailLogin.sendKeys("fabriadri2705@gmail.com");
 
-        // PASO 2: Ingresar password de Login
+        // PASO 2: Ingresar contraseña de administrador
         WebElement passwordLogin = driver.findElement(By.xpath("/html/body/app-root/app-login/section/div[2]/div/form/label[2]/input"));
         passwordLogin.sendKeys("fabriadri2705");
 
@@ -100,7 +108,8 @@ public class AceptarMedicoTest {
             e.printStackTrace();
         }
 
-        // ASSERT: Verificar que el botón 'Continuar' sea visible
+        // --- ASSERT ---
+        // Verificar que el botón 'Continuar' sea visible
         // (significa que la activación del médico fue exitosa)
         WebElement continuarBtn = driver.findElement(By.xpath("/html/body/app-root/app-admin-shell/div/section/app-detalle-medico-solicitud/div[2]/div/div/div/button"));
 

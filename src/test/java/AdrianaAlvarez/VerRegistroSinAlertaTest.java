@@ -1,5 +1,6 @@
 package AdrianaAlvarez;
-
+// Del Caso de Prueba 54
+// Verificar que un usuario paciente puede ver la información de sus propias tomas de glucosa 
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;

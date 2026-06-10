@@ -1,8 +1,13 @@
 AdrianOrdonez\RegistrarAdministradorTest.class
-AdrianGonzales\PruebaTest.class
+AdrianaAlvarez\VerRegistrosConAlertaTest.class
 DiegoLaguna\ProbarLoginTest.class
+AdrianGonzales\VerAdministradores.class
 DiegoLaguna\LoginErroneoTest.class
 AdrianOrdonez\AceptarMedicoTest.class
-DiegoLaguna\RegistrarPacienteTest.class
-AdrianOrdonez\RegistrarGlucosaTest.class
+AdrianaAlvarez\VerRegistroSinAlertaTest.class
+AdrianaAlvarez\HipoglucemiaAlertaTest.class
+AdrianOrdonez\VerMedicoActivoTest.class
 DiegoLaguna\AceptarPacienteTest.class
+AdrianGonzales\CerrarSesion.class
+AdrianGonzales\RegistrarMedicoTest.class
+DiegoLaguna\RegistrarPacienteTest.class
