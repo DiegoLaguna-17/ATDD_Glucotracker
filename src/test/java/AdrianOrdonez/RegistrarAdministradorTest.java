@@ -26,9 +26,7 @@ public class RegistrarAdministradorTest {
     
     @Test
     public void testRegistrarAdmin() {
-        
-        // PREPARACIÓN DE LA PRUEBA
-
+        // --- PREPARACIÓN DE LA PRUEBA ---
         driver.get("http://localhost:4200");
 
         try {
@@ -37,7 +35,7 @@ public class RegistrarAdministradorTest {
             e.printStackTrace();
         }
         
-        // LÓGICA DE LA PRUEBA
+        // --- LÓGICA DE LA PRUEBA ---
 
         // PASO 1: Ingresar email de Login
         WebElement emailLogin = driver.findElement(By.xpath("/html/body/app-root/app-login/section/div[2]/div/form/label[1]/input"));
@@ -108,7 +106,8 @@ public class RegistrarAdministradorTest {
             e.printStackTrace();
         }
 
-        // ASSERT: Verificar que el botón "Aceptar" sea visible
+        // --- ASSERT --- 
+        // Verificar que el botón "Aceptar" sea visible
         // (significa que el registro del administrador fue exitoso)
         WebElement aceptarBtn = driver.findElement(By.xpath("/html/body/app-root/app-admin-shell/div/section/app-agregar/div[2]/div/div/div[2]/button"));
 
