@@ -17,6 +17,17 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/****************************************/
+//
+// Prueba de Aceptacion / Caso de Prueba : Verificar el rechazo de inicio de sesión al ingresar una contraseña incorrecta.
+//
+// PASO 1. 	Llenar el campo de usuario con un correo electrónico válido
+// PASO 2.  Llenar el campo de contraseña con un valor erroneo.
+// PASO 3.  Presionar el boton de iniciar sesión
+//
+// Resultado Esperado: Debe aparecer un mensaje de correo o contraseña incorrectos
+/****************************************/
+
 public class LoginErroneoTest {
 
     private WebDriver driver;

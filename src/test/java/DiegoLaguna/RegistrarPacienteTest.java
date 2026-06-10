@@ -14,6 +14,17 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/****************************************/
+//
+// Prueba de Aceptacion / Caso de Prueba : Verificar que un nuevo paciente pueda registrarse correctamente completando todos los campos obligatorios con datos válidos.
+//
+// PASO 1. 	Ingresar a la pagina de Glucotracker por medio de un navegador
+// PASO 2.  Ingresar a la sección de registro de paciente haciendo click en "Registrarte como paciente".
+// PASO 3.  Completar correctamente el formulario de registro como paciente cumpliendo las validaciones de los campos.
+// PASO 4:  Hacer click en el boton "Registar"
+// Resultado Esperado: Despliegue de mensaje de registro solicitado correctamente
+/****************************************/
+
 public class RegistrarPacienteTest {
 
     private WebDriver driver;

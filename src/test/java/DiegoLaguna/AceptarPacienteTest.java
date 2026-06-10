@@ -15,6 +15,16 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/****************************************/
+//
+// Prueba de Aceptacion / Caso de Prueba : Verificar que el administrador pueda aceptar exitosamente la solicitud de un paciente
+//
+// PASO 1. 	Revisar la información del paciente solicitante en la pantalla de detalles.
+// PASO 2. Hacer clic en el botón "Aceptar"
+// PASO 3. Hacer clic en "Activar"
+//
+// Resultado Esperado: Despliegue de cuadro de activación de paciente
+/****************************************/
 public class AceptarPacienteTest {
     private WebDriver driver;
     
