@@ -27,9 +27,20 @@ private WebDriver driver;
         driver.manage().window().maximize();
     }
     
+	// --- TEST CASES RELACIONADOS ---
+
+	/*
+		- Nº 8: Verificar que al presionar el botón de “REGISTRATE COMO MÉDICO” abra el formulario de solicitud de registro de médicos
+
+		- Nº 11: Verificar que el campo “Correo” en el formulario de solicitud de registro de médicos valide que el valor ingresado sea correspondiente a una dirección de correo válida
+
+		- Nº 13: Verificar que el campo “Matrícula Profesional” en el formulario de solicitud de registro de médicos valide que el documento subido sea un documento PDF
+
+		- Nº 14: Verificar que el campo “Carnet Profesional” en el formulario de solicitud de registro de médicos valide que el documento subido sea un documento válido solo para imágenes JPG, JPEG y PNG
+	*/
     @Test
     public void testResgistrarMedico() {
-    	//PREPARACION
+    	// --- PREPARACIÓN DE LA PRUEBA ---
     	driver.get("http://localhost:4200");
     	
     	try {
@@ -37,8 +48,8 @@ private WebDriver driver;
         } catch(InterruptedException e) {
             e.printStackTrace();
         }
-    	//LOGICA
-    	//PASO 1: Hacer clic en el boton de registrar medico
+    	// --- LÓGICA DE LA PRUEBA ---
+    	// PASO 1: Hacer clic en el boton de registrar medico
     	WebElement botonMedico = driver.findElement(By.xpath("/html/body/app-root/app-login/section/div[1]/div/div/button[2]"));
     	botonMedico.click();
     	
@@ -48,7 +59,7 @@ private WebDriver driver;
             e.printStackTrace();
         }
     	
-    	//PASO 2: Llenar formulario
+    	// PASO 2: Llenar formulario
     	WebElement txtNombreCompleto = driver.findElement(By.xpath("/html/body/app-root/app-solicitar-medico/div/div/form/div[1]/div[1]/input"));
     	txtNombreCompleto.sendKeys("Steven Strange");
     	
@@ -85,7 +96,8 @@ private WebDriver driver;
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    	//ASSERT
+    	// --- ASSERT ---
+		// Verificar que el botón "Enviar" esté activado
     	WebElement botonEnviar = driver.findElement(By.xpath("/html/body/app-root/app-solicitar-medico/div/div/form/div[3]/button[1]"));
     	Assert.assertTrue("El botón Enviar no esta activado", botonEnviar.isEnabled());
     }
